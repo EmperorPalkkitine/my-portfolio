@@ -1,6 +1,6 @@
 site_name: Seth Palkki — Portfolio
 site_description: Personal site with resume and projects
-site_url: https://<your-username>.github.io/<your-repo>/
+site_url: https://emperorpalkkitine.github.io/my-portfolio/
 theme:
   name: material
   features:
