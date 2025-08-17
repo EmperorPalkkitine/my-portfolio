@@ -1,0 +1,45 @@
+site_name: Seth Palkki — Portfolio
+site_description: Personal site with resume and projects
+site_url: https://<your-username>.github.io/<your-repo>/
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+nav:
+  - Home: index.md
+  - Resume: resume.md
+  - Projects:
+      - Overview: projects/index.md
+      - Project Template: projects/project-template.md
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/EmperorPalkkitine
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/seth-palkki-1b390b217/
+plugins:
+  - search
