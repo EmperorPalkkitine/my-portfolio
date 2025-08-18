@@ -679,27 +679,37 @@
 <p><strong>Stack:</strong> Python, Flask, MySQL, Dart via Flutter<br />
 <strong>Role:</strong> Full Stack Developer with emphasis on the back-end 
 <strong>Dates:</strong> 2024–2025<br />
-<strong>Repo:</strong> <link if public></p>
+<strong>Repos:</strong> <a href="https://github.com/EmperorPalkkitine/asugs_flask_backend.git">Back-end</a>, <a href="https://github.com/EmperorPalkkitine/asuGS-ios.git">Front-end</a></p>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>One paragraph that explains the problem, your approach, and the outcome.</p>
+<p>GridScout is a smart data collection and model creation tool for electric power distribution systems that allows for rapid in-field distribution network modeling during equipment installation and maintenance via a mobile device application operated by technicians and other utility personnel. GridScout addresses the substantial need for utilities to efficiently manage the rapid growth of distributed energy resources (DERs) and aging grid infrastructure. As utilities shift towards smarter, more adaptive networks, existing processes for data collection and model updates are no longer sufficient. Overall functionality of the application is achieved through means of cellular assisted geolocation, development of an equipment/component database and integration to the distribution simulator software, OpenDSS.</p>
 <h2 id="screenshots-media">Screenshots / Media<a class="headerlink" href="#screenshots-media" title="Permanent link">&para;</a></h2>
-<p>Add images to <code>docs/assets/</code> and embed like:
-<div class="highlight"><pre><span></span><code>![<span class="nt">screenshot</span>](<span class="na">../assets/your-image.png</span>)
-</code></pre></div></p>
+<p><img alt="screenshot" src="../../assets/GridScout_Screenshot.png" />
+Screenshot of one of the input pages for the mobile application.</p>
 <h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Feature 1</li>
-<li>Feature 2</li>
-<li>Feature 3</li>
+<li>End-users are able to scan a QR code that will automatically fill out text input fields for ease of use</li>
+<li>Back-end coding does the heavy lifting by deciding whether the equipment installation is a replacement or new install based on data in the mySQL database</li>
+<li>AWS S3 file is automatically updated when technician finishes the job on the mobile application, providing simulation engineers by the minute up to date info on the equipment in the grid</li>
 </ul>
 <h2 id="technical-notes">Technical Notes<a class="headerlink" href="#technical-notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Interesting design decisions</li>
-<li>Performance or reliability considerations</li>
-<li>Any math/EE details</li>
+<li>Flask RESTful API coded in Python communicates with the Dart front-end, the mySQL database, and the AWS S3 bucket</li>
+<li>With the exception of the AWS S3 bucket, all other development was done completely free of cost and open source</li>
 </ul>
 <h2 id="what-i-learned">What I learned<a class="headerlink" href="#what-i-learned" title="Permanent link">&para;</a></h2>
-<p>Bullet points or short paragraph.</p>
+<ul>
+<li><strong>Build it the way people actually work.</strong> Making “replace” vs “add new” match real work orders made the app easier to use.</li>
+<li><strong>QR codes are fast, but still need double-checks.</strong> Using the first letter to guess the part type is handy, but the server must verify it.</li>
+<li><strong>Changes should be all-or-nothing.</strong> When I update the database and the grid file, they should both succeed—or neither—so things don’t get out of sync.</li>
+<li><strong>Save versions before editing.</strong> Keeping backups of the grid model (like save points) makes it easy to undo mistakes.</li>
+<li><strong>Show only the fields that matter.</strong> The form changes based on the part type, so techs don’t see a bunch of useless boxes.</li>
+<li><strong>Validate in the app and on the server.</strong> Catch bad numbers or missing info early to avoid bad data going in.</li>
+<li><strong>Keep a change history.</strong> Logging “who changed what” turns debugging into a quick look-up instead of a guessing game.</li>
+<li><strong>Use plain names.</strong> Buttons and endpoints that say “Replace component” or “Add component” are clearer than clever labels.</li>
+<li><strong>Plan for weak signal.</strong> Small local caching and quick feedback make the app usable when the connection is spotty.</li>
+<li><strong>Run small checks before shipping.</strong> A quick lint/test run catches breakages early.</li>
+<li><strong>Write short how-tos.</strong> A one-page guide like “How to add a new part type” saves time later.</li>
+</ul>
 
 
 

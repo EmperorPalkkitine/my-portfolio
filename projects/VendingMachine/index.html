@@ -371,19 +371,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Hot Dog Vending Machine
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -395,70 +382,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#screenshots-media" class="md-nav__link">
-    <span class="md-ellipsis">
-      Screenshots / Media
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#technical-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technical Notes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-i-learned" class="md-nav__link">
-    <span class="md-ellipsis">
-      What I learned
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -608,59 +531,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#screenshots-media" class="md-nav__link">
-    <span class="md-ellipsis">
-      Screenshots / Media
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#technical-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technical Notes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-i-learned" class="md-nav__link">
-    <span class="md-ellipsis">
-      What I learned
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -676,30 +546,22 @@
 
 
 <h1 id="hot-dog-vending-machine">Hot Dog Vending Machine<a class="headerlink" href="#hot-dog-vending-machine" title="Permanent link">&para;</a></h1>
-<p><strong>Stack:</strong> Python, Flask, MySQL<br />
-<strong>Role:</strong> Lead developer<br />
-<strong>Dates:</strong> 2024–2025<br />
-<strong>Repo:</strong> <link if public></p>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>One paragraph that explains the problem, your approach, and the outcome.</p>
-<h2 id="screenshots-media">Screenshots / Media<a class="headerlink" href="#screenshots-media" title="Permanent link">&para;</a></h2>
-<p>Add images to <code>docs/assets/</code> and embed like:
-<div class="highlight"><pre><span></span><code>![<span class="nt">screenshot</span>](<span class="na">../assets/your-image.png</span>)
-</code></pre></div></p>
-<h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
+<p><strong>Software:</strong> Relay Ladder Logic (RLL)<br />
+<strong>Role:</strong> Sole Developer<br />
+<strong>Dates:</strong> 2021  </p>
+<p><strong>Problem.</strong> Build an unattended vending machine that prepares a hot dog to order with basic customization, using a low-cost PLC while keeping the process safe and repeatable.</p>
+<p><strong>Approach.</strong></p>
 <ul>
-<li>Feature 1</li>
-<li>Feature 2</li>
-<li>Feature 3</li>
+<li><strong>Ladder-logic state machine</strong> (Idle → Order → Prep/Heat → Dispense → Toppings → Eject → Fault/Recovery)</li>
+<li><strong>I/O map</strong> for actuators (feed/valves) and sensors (limits/guards/temperature-ready)</li>
+<li><strong>Parameterized options</strong> (portion times, topping enable bits) to avoid hard-coding</li>
+<li><strong>Safety interlocks</strong>, timeout-based jam detection, and E-stop</li>
+<li><strong>Bench testing with simulated I/O</strong> to validate sequencing and restart behavior</li>
 </ul>
-<h2 id="technical-notes">Technical Notes<a class="headerlink" href="#technical-notes" title="Permanent link">&para;</a></h2>
+<p><strong>Outcome.</strong></p>
 <ul>
-<li>Interesting design decisions</li>
-<li>Performance or reliability considerations</li>
-<li>Any math/EE details</li>
+<li>Working prototype that reliably sequences prep → dispense → toppings based on user selections</li>
 </ul>
-<h2 id="what-i-learned">What I learned<a class="headerlink" href="#what-i-learned" title="Permanent link">&para;</a></h2>
-<p>Bullet points or short paragraph.</p>
 
 
 
