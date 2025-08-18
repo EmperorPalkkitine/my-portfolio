@@ -1,28 +1,20 @@
 # Hot Dog Vending Machine
 
-**Stack:** Python, Flask, MySQL  
-**Role:** Lead developer  
-**Dates:** 2024–2025  
-**Repo:** <link if public>
+**Software:** Relay Ladder Logic (RLL)  
+**Role:** Sole Developer  
+**Dates:** 2021  
 
-## Summary
-One paragraph that explains the problem, your approach, and the outcome.
+**Problem.** Build an unattended vending machine that prepares a hot dog to order with basic customization, using a low-cost PLC while keeping the process safe and repeatable.
 
-## Screenshots / Media
-Add images to `docs/assets/` and embed like:
-```markdown
-![screenshot](../assets/your-image.png)
-```
+**Approach.**
 
-## Key Features
-- Feature 1
-- Feature 2
-- Feature 3
+- **Ladder-logic state machine** (Idle → Order → Prep/Heat → Dispense → Toppings → Eject → Fault/Recovery)
+- **I/O map** for actuators (feed/valves) and sensors (limits/guards/temperature-ready)
+- **Parameterized options** (portion times, topping enable bits) to avoid hard-coding
+- **Safety interlocks**, timeout-based jam detection, and E-stop
+- **Bench testing with simulated I/O** to validate sequencing and restart behavior
 
-## Technical Notes
-- Interesting design decisions
-- Performance or reliability considerations
-- Any math/EE details
+**Outcome.**
 
-## What I learned
-Bullet points or short paragraph.
+- Working prototype that reliably sequences prep → dispense → toppings based on user selections
+
