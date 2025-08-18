@@ -34,7 +34,11 @@ nav:
   - Resume: resume.md
   - Projects:
       - Overview: projects/index.md
-      - Project Template: projects/project-template.md
+      - GridScout: projects/GridScout.md
+      - Hot Dog Vending Machine: projects/VendingMachine.md
+  - Social Media:
+      - LinkedIn: https://www.linkedin.com/in/seth-palkki-1b390b217/
+      - GitHub: https://github.com/EmperorPalkkitine
 extra:
   social:
     - icon: fontawesome/brands/github
