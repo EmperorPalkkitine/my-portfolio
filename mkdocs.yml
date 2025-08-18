@@ -3,6 +3,8 @@ site_description: Personal site with resume and projects
 site_url: https://emperorpalkkitine.github.io/my-portfolio/
 theme:
   name: material
+  icon: 
+    logo: material/lightning-bolt
   features:
     - navigation.instant
     - navigation.tracking
@@ -47,3 +49,4 @@ extra:
       link: https://www.linkedin.com/in/seth-palkki-1b390b217/
 plugins:
   - search
+copyright: "© 2025 Seth Palkki"
